@@ -1,0 +1,33 @@
+<html>
+	<head>
+	<title>Assignment 3-7 </title>
+	<!-- QUESTION 7 :Write a function squareOfAsterisks that displays a solid square of asterisks whose side is specified in integer parameter side. For example, if side is 4, the function displays
+	****
+	****
+	****
+	****
+	Incorporate this function into a script that reads an integer value for side from the user at the keyboard and performs the drawing with the squareOfAsterisks function.-->
+
+	<script type="text/javascript">
+		var input = prompt("Please enter an integer or click Cancel to terminate the script");
+		squareOfAsterisks(parseInt(input));
+
+		function squareOfAsterisks(size)
+		{
+			for(var a = 1; a <= size * size; ++a)
+			{
+				document.write("* ");
+				if (a % size == 0)
+					document.write("<br/>")
+			}
+		}
+	</script>
+	</head>
+
+
+	<body>
+
+	</body>
+		
+
+</html>
