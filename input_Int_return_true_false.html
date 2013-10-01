@@ -1,0 +1,30 @@
+<html>
+	<head>
+	<title>Assignment 3-6 </title>
+	<!-- QUESTION 6 :Write a script that inputs integers (one at a time) and passes them one at a time to function is even, which uses the modulus operator to determine whether an integer isEven. The function should take an integer argument and return true if the integer is even and false otherwise. Use sentinel-­‐controlled looping and a prompt dialog.-->
+
+	<script type="text/javascript">
+		input = prompt("Please type an integer");
+
+		while (input) 
+		{
+			var value = parseInt(input);
+			document.write(value + (isEven(value) ? " is even" : " is odd") +"<br/>" );
+
+			input = prompt ("Please type an integer or Click Cancel to terminate the script" );
+		}
+
+		function isEven (num)
+		{
+			return (num % 2 == 0);
+		}
+	</script>
+	</head>
+
+
+	<body>
+
+	</body>
+		
+
+</html>
