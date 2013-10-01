@@ -1,0 +1,44 @@
+<html>
+	<head>
+	<title>Assignment 3-5 </title>
+	<!-- QUESTION 5 :Write a function multiple that determines, for a pair of integers, whether the second integer is a multiple of the first. The function should take two integer arguments and return true if the second is a multiple of the first, and false otherwise. Incorporate this function into a script that inputs a series of pairs of integers (one pair at a time). The XHTML form should consist of two text fields and a button to initiate the calculation. The user should interact with the program by typing numbers in both text fields,
+	then clicking the button.-->
+
+	<script type="text/javascript">
+		function getNumber()
+		{
+			var num1 = parseInt(form.num1.value);
+			var num2 = parseInt(form.num2.value);
+			var form = document.getElementById("myForm");
+			var result;
+
+			if(multiple(num1,num2))
+				form.result.value = num1 + "is a multiple of " + num2;
+
+			else 
+				form.result.value = num1 + "is not a multiple of " + num2;
+
+		}
+
+		function multiple(num1,num2)
+		{
+			return ((num1 % num2) == 0);
+		}
+	</script>
+	</head>
+
+
+	<body>
+		<h2>IntegerPower Function</h2>
+		<form id="myForm" action="">
+		1st number :	<input type="text" name="num1" /> <br/>
+		2nd number :	<input type="text" name="num2" /> <br/>
+		Result :	<input type="text" name="result" /> <br/>
+		 <input type="button" value="Click to calculate" onclick="getNumber()" /> <br/>
+
+
+		</form>
+	</body>
+		
+
+</html>
