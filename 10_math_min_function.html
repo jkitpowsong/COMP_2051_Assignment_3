@@ -1,0 +1,47 @@
+<html>
+	<head>
+	<title>Assignment 3-10 </title>
+	<!-- QUESTION 10 :
+	Write a function minimum3 that returns the smallest of three floating-­‐point numbers. Use the Math.min
+	function to implement minimum3. Incorporate the function into a script that reads three values from
+	the user and determines the smallest value.-->
+
+	<script type="text/javascript">
+		var num1;
+		var num2;
+		var num3;
+		var min;
+
+		function findSmallestValue()
+		{
+			num1 = prompt("Type 1st number","0");
+			num2 = prompt("Type 2nd number","0");
+			num3 = prompt("Type 3rd number","0");
+
+			min = minimum3 (num1,num2,num3);
+
+
+			document.write("First number is " + num1 + "<br>");
+			document.write("Second number is " + num2 + "<br>");
+			document.write("Third number is " + num3 + "<br>" + "<hr>");
+
+			document.write("<b>Smallest number is </b>" + min);
+		}
+
+		function minimum3(a, b, c)
+		{
+			var smallestValue;
+			smallestValue = Math.min(a,b);
+			smallestValue = Math.min(smallestValue, c);
+			return smallestValue;
+		}
+		
+	</script>
+	</head>
+
+
+	<body onload = "findSmallestValue()">
+	</body>
+		
+
+</html>
