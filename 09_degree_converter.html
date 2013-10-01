@@ -1,0 +1,61 @@
+<html>
+	<head>
+	<title>Assignment 3-9 </title>
+	<!-- QUESTION 9 :
+	a. Function celsius returns the Celsius equivalent of a Fahrenheit temperature, using the
+	calculation C = 5.0 / 9.0 * ( F -­‐ 32 );
+	
+	b. Function fahrenheit returns the Fahrenheit equivalent of a Celsius temperature, using the
+	calculation F = 9.0 / 5.0 * C + 32;
+
+	Use these functions to write a script that enables the user to enter either a Fahrenheit or a Celsius
+	temperature and displays the Celsius or Fahrenheit equivalent. Your XHTML document should contain two
+	buttons􀍶one to initiate the conversion from Fahrenheit to Celsius and one to initiate the conversion from Celsius to Fahrenheit-->
+
+	<script type="text/javascript">
+		
+		// Convert to celsius
+		function convertToCelsius()
+		{
+			var form = document.getElementById("myForm");
+			var value = parseInt(form.fahNum.value);
+			form.celNum.value = celsius(value);
+		}
+
+		function celsius (fahTemp)
+		{
+			return (Math.floor(0.5 / 9.0 * (fahTemp - 32)));
+		}
+
+		// Convert to fahrenheit
+		function convertToFahrenheit()
+		{
+			var form = document.getElementById("myForm");
+			var value = parseInt(form.celNum.value);
+			form.fahNum.value = fahrenheit(value);
+		}
+
+		function fahrenheit (celTemp)
+		{
+			return (Math.floor(9.0 / 5.0 * celTemp + 32));
+		}
+
+	</script>
+	</head>
+
+
+	<body>
+		<form id="myForm" action="">
+			Fahrenheit: <input type="text" name="fahNum">
+			<input type="button" value="Convert to Celsius" onclick="convertToCelsius()"><br/>
+
+
+			Celsius:	<input type="text" name="celNum">
+			<input type="button" value="Convert to Fahrenheit" onclick="convertToFahrenheit()"><br/>
+
+
+		</form>
+	</body>
+		
+
+</html>
