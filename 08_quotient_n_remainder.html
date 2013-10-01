@@ -1,0 +1,41 @@
+<html>
+	<head>
+	<title>Assignment 3-8 </title>
+	<!-- QUESTION 8 :Write program segments that accomplish each of the following tasks:
+
+	a. Calculate the integer part of the quotient when integer a is divided by integer
+
+	b. Calculate the integer remainder when integer a is divided by integer b.
+
+	Then, use the programpieces developed in parts (a) and (b) to write a function displayDigits that receives an integer between 1 and 99999 and prints it as a series of digits, each pair of which is separated by two spaces.
+	For example, the integer 4562 should be printed as 4 5 6 2-->
+
+	<script type="text/javascript">
+		var input = prompt("Enter a number between 1 and 99999","1");
+		document.write("<pre>");
+		displayDigits(parseInt(input));
+		document.write("</pre>");
+
+		// Part A
+		function quotient(a,b) 
+		{
+			return Math.floor(a/b);
+		}
+
+		// Part B
+		function remainder(a,b) 
+		{
+			return a % b;
+		}
+
+
+	</script>
+	</head>
+
+
+	<body>
+
+	</body>
+		
+
+</html>
