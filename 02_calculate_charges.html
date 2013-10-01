@@ -1,0 +1,53 @@
+<html>
+	<head>
+	<title>Assignment 3-2 </title>
+	<!-- QUESTION 2 : A parking garage charges a $2.00 minimum fee to park for up to three hours. The garage charges an additional $0.50 per hour for each hour or part thereof in excess of three hours. The maximum charge for any given 24-­‐hour period is $10.00. Assume that no car parks for longer than 24 hours at a time.
+	Write a script that calculates and displays the parking charges for each customer who parked a car in
+	this garage yesterday. You should input from the user the hours parked for each customer. The program
+	should display the charge for the current customer and should calculate and display the running total of yesterday's receipts. The program should use the function calculate-­‐Charges to determine the charge
+	for each customer. Use a text input field to obtain the input from the user.-->
+
+	<script type="text/javascript">
+
+		//Get input from a user
+		function parkingFee()
+		{
+
+			// Ask user to input parking hours
+			var parkingHours = parseFloat(prompt("How many hours you have parked today?"));
+
+
+			//  0 to 3 hrs - $2.00 / hr
+			if (parkingHours <= 3.0 && parkingHours > 0.0) 
+				{
+				var fee = 2.0;
+				document.write("Total charges is " + fee * parkingHours);
+				}
+			
+			// 4 to 24 hrs - $0.5 / additional hr
+			else if (parkingHours > 3.0 && parkingHours <= 24.0)
+				{
+				 var fee2 = (parkingHours-3.0)*0.5+6;
+
+				 document.write("Total charges is " + fee2);
+
+				}
+			
+			// more than 24 hrs / max. charge
+			else if (parkingHours > 24.0)
+				{
+				var fee3 = 10.0;
+				document.write("Total charges is " + fee3);
+				}		
+		}
+
+	</script>
+	</head>
+
+
+	<body>
+		<input type = "button" value="Calculate parking fee" onclick="parkingFee()" />
+	</body>
+		
+
+</html>
