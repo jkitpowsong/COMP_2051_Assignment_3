@@ -1,0 +1,28 @@
+<html>
+	<head>
+	<title>Assignment 3-1 </title>
+	<!-- QUESTION 1 : Write a script that prompts the user for the radius of a circle, uses a function circleArea to calculate the area of the circle, and prints the area of the circle.-->
+
+	<script type="text/javascript">
+
+		// Return the area of a circle with radius r
+		function circleArea () {
+			
+			var radius = parseFloat(prompt("Enter radius value")); // Ask user to input a number
+			
+			var formular = Math.PI * radius * radius;
+			
+			document.write("The area of circle is " + formular );
+
+		}
+
+	</script>
+	</head>
+
+
+	<body>
+		<input type = "button" value="Calculate radius of circle" onclick="circleArea()" />
+	</body>
+		
+
+</html>
