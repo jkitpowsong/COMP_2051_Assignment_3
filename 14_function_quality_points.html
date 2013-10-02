@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>Assigment 3-14</title>
+		<!-- Write a function qualityPoints that inputs a studentâ€™s average and returns 4 if the student's average is 90â€“100, 3 if the average is 80â€“89, 2 if the average is 70â€“79, 1 if the average is 60â€“69 and 0 if the average is lower than 60. Incorporate the function into a script that reads a value from the user.-->
+			<script type="text/javascript">
+				function qualtyPoints(average)
+				{
+					if (average < 0 || average > 100)
+					{
+						return false;
+					}
+
+					if (average >= 90 && average <= 100)
+					{
+						return 4; 
+					}
+
+					else if (average >= 80 && average <= 89)
+					{
+						return 3;
+					}
+
+					else if (average >= 70 && average <= 79)
+					{
+						return 2;
+					}
+
+					else if (average >= 60 && average <= 69)
+					{
+						return 1;
+					}
+
+					else if (average >= 50 && average <= 50)
+					{
+						return 0;
+					}
+				}
+
+				window.onload = function();
+				{
+					var input = parseInt(prompt("Type your grade (ranging from 0-100)"));
+
+					document.write("You GPA is " + qualtyPoints(input));
+				}
+			</script>
+	</head>
+	<body>
+
+
+	</body>
+</html>
+
