@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<title>Assigment 3-11</title>
+		<!-- An integer number is said to be a perfect number if its factors, including 1 (but not the number itself), sum to the number. For example, 6 is a perfect number, because 6 = 1 + 2 + 3.Write a function perfect that determines whether parameter number is a perfect number. 
+
+
+		Use this function in a script that determines and displays all the perfect numbers between 1 and 1000. Print the factors of each perfect number to confirm that the number is indeed perfect. Challenge the computing power of your computer by testing numbers much larger than 1000. Display the results in a <textarea>. An integer is said to be prime if it is greater than 1 and divisible only by 1 and itself. For example, 2, 3, 5 and 7 are prime, but 4, 6, 8 and 9 are not.
+		
+		a. Write a function that determines whether a number is prime.
+		
+		b. Use this function in a script that determines and prints all the prime numbers between 1 and 10,000. How many of these 10,000 numbers do you really have to test before being sure that you have found all the primes? Display the results in a <textarea>.
+		Initially, you might think that n/2 is the upper limit for which you must test to see whether a number is prime, but you only need go as high as the square root of n. Why? Rewrite the program using the Math.sqrt method to calculate the square root, and run it both ways. Estimate the performance improvement.-->
+			<script type="text/javascript">
+				
+				// Find perfect numbers
+				var factors;
+				function start()
+				{
+					for (var  i = 1; i <= 1000; ++i)
+						if (perfect(i) == true)
+							document.write(i + "is perfect. Factors: " + factors + "<br/>")
+				}
+
+				function perfect(value)
+				{
+					var factorSum = 1;
+					factors = "1";
+					for (var b = 2; <= Math.floor(value/2); b++)
+						if(value % b == 0)
+						{
+							factorSum += b;
+							factors += " " + b; 
+						}
+					if (factorSum == value)
+						return true;
+					return false;
+				}
+			
+				// **** PROBLEM HERE - Code doesn't print out the all perfect numbers. 
+
+				//Part A : determine prime number
+
+				document.write("Prime numners between 1 and 1000 are");
+
+				document.write("<textarea rows ='10'");
+
+				for (var m =1; m <= 1000; m++)
+					if (prime(m))
+					{
+						document.write(m);
+
+					}
+
+					function prime(n)
+					{
+						for (var v =2; v <= n/2; v++)
+							if (n % v == 0)
+								return false;
+							return true;
+					}
+
+
+			</script>
+	</head>
+	
+	<body onload = "start()">
+	
+	</body>
+</html>
+
