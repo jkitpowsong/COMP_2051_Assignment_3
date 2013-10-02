@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>Assigment 3-15</title>
+		<!-- Write a script that simulates coin tossing. Let the program toss the coin each time the user clicks the Toss button. Count the number of times each side of the coin appears. Display the results. The program should call a separate function flip that takes no arguments and returns false for tails and true for heads. [Note: If the program realistically simulates the coin tossing, each side of the coin should appear approximately half the time.]-->
+			<script type="text/javascript">
+				var heads = 0;
+				var tails = 0;
+
+				function flipOne() 
+				{
+					var Fheads = document.getElementById("heads");
+					var Ftails = document.getElementById("tails");
+
+					if(flip())
+					{
+						++heads;
+						Fheads.value = heads; 
+					}
+
+					else
+					{
+						++tails;
+						Ftails.value = tails;
+					}
+				}
+
+				function flipTwo()
+				{
+					return Math.floor(Math.random()*2) == 1
+				}
+
+								
+			</script>
+	</head>
+	<body>
+		<form>
+			Heads : <input type = "text" id = "heads"><br/>
+			Tails : <input type = "text" id = "tails"><br/>
+			<input type="button" value="Flip it now" onclick="flipOne()"
+		</form>
+	
+
+	</body>
+</html>
+
